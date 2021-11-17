@@ -12,7 +12,8 @@ module.exports = {
         project: ['./tsconfig.eslint.json']
       },
       rules: {
-        '@typescript-eslint/prefer-ts-expect-error': 'off'
+        '@typescript-eslint/prefer-ts-expect-error': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off'
       }
     },
     {

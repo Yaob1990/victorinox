@@ -1,10 +1,8 @@
-/**
- * It is recommended that this file is only used to expose declarations and the main entrance.
- */
-import DummyClass from './victorinox'
+import {
+  PromiseThrottle,
+  PromiseThrottleFn,
+  jumpTime,
+  jumpTimeFn
+} from './promiseThrottle'
 
-// export types
-export * from './declarations'
-
-// export main
-export default DummyClass
+export { PromiseThrottle, PromiseThrottleFn, jumpTime, jumpTimeFn }
