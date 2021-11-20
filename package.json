@@ -1,10 +1,10 @@
 {
-  "name": "victorinox",
+  "name": "@aocoding/victorinox",
   "version": "1.0.0",
   "description": "常用工具库",
   "keywords": [],
-  "main": "dist/victorinox.umd.js",
-  "module": "dist/victorinox.es6.js",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es6.js",
   "typings": "dist/types/index.d.ts",
   "files": [
     "dist"

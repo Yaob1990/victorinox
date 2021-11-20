@@ -9,7 +9,7 @@
 ## Install
 
 ```bash
-npm install victorinox
+npm install @aocoding/victorinox
 ```
 
 ## Usage
