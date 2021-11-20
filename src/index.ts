@@ -1,8 +1,3 @@
-import {
-  PromiseThrottle,
-  PromiseThrottleFn,
-  jumpTime,
-  jumpTimeFn
-} from './promiseThrottle'
-
-export { PromiseThrottle, PromiseThrottleFn, jumpTime, jumpTimeFn }
+export * from './promiseThrottle'
+export * from './timer'
+export * from './emoji'

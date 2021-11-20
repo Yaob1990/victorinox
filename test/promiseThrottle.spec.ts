@@ -6,18 +6,16 @@ describe('PromiseThrottle 测试', () => {
   const mockCallback = jest.fn(async function () {
     return await new Promise(resolve => {
       setTimeout(() => {
-        console.log('函数被调用')
         resolve(true)
       }, 100)
     })
   })
 
-  // afterEach(() => {
-  //   jest.runAllTimers()
-  // })
+  beforeEach(() => {
+    mockCallback.mock.calls.length = 0
+  })
 
   test('两次执行，只执行一次', async () => {
-    mockCallback.mock.calls.length = 0
     const debounce = PromiseThrottleFn(mockCallback)
     debounce()
     debounce()

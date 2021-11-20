@@ -13,7 +13,10 @@ module.exports = {
       },
       rules: {
         '@typescript-eslint/prefer-ts-expect-error': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off'
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/return-await': 'off',
+        '@typescript-eslint/promise-function-async': 'off',
+        '@typescript-eslint/no-floating-promises': 'off'
       }
     },
     {
