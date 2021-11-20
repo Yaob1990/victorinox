@@ -1,0 +1,27 @@
+name: Docs Deploy
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "src/*"
+      - "package.json"
+
+jobs:
+  docs_deploy:
+    runs-on: ubuntu-latest
+
+    name: 'Docs Deploy'
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build:preview
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.6
+        with:
+          branch: gh-pages
+          folder: preview
