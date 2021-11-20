@@ -3,9 +3,6 @@ name: Docs Deploy
 on:
   push:
     branches: [ main ]
-    paths:
-      - "src/*"
-      - "package.json"
 
 jobs:
   docs_deploy:
