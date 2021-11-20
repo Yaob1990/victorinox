@@ -25,16 +25,21 @@ export function emojiToUnicode(emoji: string) {
 }
 
 /**
- * @see unicode编码之后\变成\\，解码函数（注意，调用需要 try catch 有些场景会异常）
+ * @see unicode编码之后\变成\\，解码函数（注意，异常时候，透传文本）
  * @see "\\u00253A" => "\u00253A"
  * @author 原始地址：https://stackoverflow.com/questions/33685680/emoji-surrogate-string-with-javascript-how-to-parse
  * @param str
  *
  */
 export function parseUnicode(str: string) {
-  const r = /\\u([\d\w]{4})/gi
-  str = str.replace(r, function (match, grp) {
-    return String.fromCharCode(parseInt(grp, 16))
-  })
-  return str
+  try {
+    const r = /\\u([\d\w]{4})/gi
+    str = str.replace(r, function (match, grp) {
+      return String.fromCharCode(parseInt(grp, 16))
+    })
+    return str
+  } catch (e) {
+    // 异常时候，直接对外输出，以免程序崩溃
+    return str
+  }
 }
